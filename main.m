@@ -1,6 +1,8 @@
 clc;
 clear;
 
+% toolboxes used: image processing toolbox
+
 img = im2gray(imread("teeth_sample.png"));
 img = im2double(adapthisteq(img));
 [m, n] = size(img);
@@ -70,9 +72,6 @@ plot(interpX, interpY, 'r-', 'LineWidth', 2);
 %plot(sortedColumns, sortedIndices, 'ro', 'MarkerSize', 6, 'LineWidth', 2);
 %hold off;
 
-title('Smooth Curve of Local Minima');
-xlabel('Column Index');
-ylabel('Row Index');
 grid on;
 
 %disp(table(allColumns, indices, allProbabilities));
